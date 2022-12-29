@@ -24,6 +24,8 @@ function onMouseDown() {
   ball.classList.remove('animation-end');
   ball.classList.add('animation-move');
   stateChanger(100, 100, 'coral');
+  ball.style.top = window.event.pageY - 50 + 'px';
+  ball.style.left = window.event.pageX - 50 + 'px';
   ball.style.cursor = 'grab';
   ball.innerHTML = 'Grab!!';
 }
