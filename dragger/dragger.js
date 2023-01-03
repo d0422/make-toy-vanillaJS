@@ -1,4 +1,8 @@
-const ball = document.getElementById('ball');
+const ball = document.createElement('div');
+ball.appendChild(document.createTextNode('Grab Me!'));
+ball.classList.add('ball');
+document.body.appendChild(ball);
+
 let pressed = false;
 function stateChanger(width, height, backgroundColor) {
   ball.style.backgroundColor = backgroundColor;
