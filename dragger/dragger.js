@@ -11,13 +11,10 @@ function stateChanger(width, height, backgroundColor) {
   ball.style.height = `${height}px`;
 }
 function animationManage() {
-  if (pressed) {
-    ball.classList.remove('animation-end');
-    ball.classList.add('animation-move');
-  } else {
-    ball.classList.remove('animation-move');
-    ball.classList.add('animation-end');
-  }
+  const addOne = pressed ? 'animation-move' : 'animation-end';
+  const removeOne = pressed ? 'animation-end' : 'animation-move';
+  ball.classList.add(addOne);
+  ball.classList.remove(removeOne);
 }
 function onMouseMove() {
   if (pressed) {
