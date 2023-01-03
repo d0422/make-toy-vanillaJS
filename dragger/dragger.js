@@ -10,11 +10,17 @@ function stateChanger(width, height, backgroundColor) {
   ball.style.width = `${width}px`;
   ball.style.height = `${height}px`;
 }
+
 function animationManage() {
   const addOne = pressed ? 'animation-move' : 'animation-end';
   const removeOne = pressed ? 'animation-end' : 'animation-move';
+  const cursorStyle = pressed ? 'grab' : 'pointer';
+  const innerHTML = pressed ? 'Grab!!' : 'Grab Me!';
+
   ball.classList.add(addOne);
   ball.classList.remove(removeOne);
+  ball.style.cursor = cursorStyle;
+  ball.innerHTML = innerHTML;
 }
 function onMouseMove() {
   if (pressed) {
@@ -26,16 +32,12 @@ function onMouseUp() {
   pressed = false;
   animationManage();
   stateChanger(200, 200, 'black');
-  ball.style.cursor = 'pointer';
-  ball.innerHTML = 'Grab Me';
 }
 function onMouseDown() {
   pressed = true;
   animationManage();
   stateChanger(100, 100, 'coral');
   onMouseMove();
-  ball.style.cursor = 'grab';
-  ball.innerHTML = 'Grab!!';
 }
 ball.addEventListener('mousedown', onMouseDown);
 ball.addEventListener('mouseup', onMouseUp);
