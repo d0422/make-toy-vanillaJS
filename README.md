@@ -3,10 +3,13 @@
 ## dragger
 
 ![Alt text](img/dragger.gif)
+
 마우스로 drag and drop을 구현
 
 ## counter
 
 ## notion
+
+![Alt text](img/notion.gif)
 
 바닐라 js와 웹팩을 사용한 노션 클론 코딩
