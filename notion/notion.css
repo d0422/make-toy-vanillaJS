@@ -96,3 +96,19 @@ section {
   color: #dadad8;
   padding-bottom: 20px;
 }
+.block {
+  border-style: none;
+  background-color: none;
+  font-size: 15px;
+}
+.block::placeholder {
+  color: #dadad8;
+}
+.block:focus {
+  outline: none;
+}
+.newPage {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+}

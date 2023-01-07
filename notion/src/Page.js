@@ -1,3 +1,5 @@
+import Block from './Block';
+
 class Page {
   constructor() {
     const mainUI = document.getElementById('main');
@@ -15,16 +17,28 @@ class Page {
     iconTemplate.classList.add('template');
     noIconTemplate.classList.add('template');
     introduce.classList.add('introduce');
-    newPage.style.padding = '100px';
+    newPage.classList.add('newPage');
     newTitle.classList.add('title');
+
     newPage.appendChild(newTitle);
     newPage.appendChild(introduce);
     newPage.appendChild(iconTemplate);
     newPage.appendChild(noIconTemplate);
+
     if (mainUI.hasChildNodes()) {
       mainUI.removeChild(mainUI.firstChild);
     }
     mainUI.appendChild(newPage);
+
+    newTitle.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        newPage.removeChild(introduce);
+        newPage.removeChild(iconTemplate);
+        newPage.removeChild(noIconTemplate);
+        setTimeout(() => newTitle.onblur(), 100);
+        new Block(newPage);
+      }
+    });
   }
 }
 export default Page;
