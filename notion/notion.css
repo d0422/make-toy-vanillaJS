@@ -82,3 +82,17 @@ section {
 .title:focus {
   outline: none;
 }
+.template {
+  color: #dadad8;
+  padding: 5px;
+  justify-content: center;
+  border-radius: 5px;
+  align-items: center;
+}
+.template:hover {
+  background-color: #efefef;
+}
+.introduce {
+  color: #dadad8;
+  padding-bottom: 20px;
+}
