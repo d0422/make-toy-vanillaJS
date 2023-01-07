@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border-color: black;
+  border-style: solid;
+  width: 15vw;
+  background-color: #f7f7f5;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+  align-items: center;
+  padding: 10px;
+}
+section {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+.pluspage {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clickable:hover {
+  background-color: #e8e8e6;
+  cursor: pointer;
+}
+.border {
+  border-radius: 3px;
+}
+.hide:hover {
+  background-color: #dadad8;
+  cursor: pointer;
+}
+.hide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
