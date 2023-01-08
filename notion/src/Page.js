@@ -27,15 +27,6 @@ class Page {
         new Block(this.newPage);
       }
     });
-    this.noIconTemplate.addEventListener('click', () => {
-      this.destroyTemplate();
-    });
-    this.iconBar.addEventListener('click', () => {
-      this.iconBar.element.innerHTML = '😚';
-      this.iconBar.element.style.fontSize = '70px';
-      this.iconBar.element.style.width = '80px';
-      this.iconBar.element.style.height = '80px';
-    });
   }
   pageInit() {
     this.introduce = new Dom(
@@ -49,14 +40,30 @@ class Page {
       'template',
       '📑 아이콘이 있는 빈 페이지'
     );
+    this.newPage.append(this.introduce);
     this.newPage.append(this.iconTemplate);
     this.newPage.append(this.noIconTemplate);
-    this.newPage.append(this.introduce);
+    this.noIconTemplate.addEventListener('click', () => {
+      this.destroyTemplate();
+      new Block(this.newPage);
+    });
+    this.iconTemplate.addEventListener('click', () => {
+      this.iconAdd();
+      this.destroyTemplate();
+      new Block(this.newPage);
+    });
+    this.iconBar.addEventListener('click', () => this.iconAdd());
   }
   destroyTemplate() {
-    this.newPage.remove(this.introduce);
     this.newPage.remove(this.iconTemplate);
     this.newPage.remove(this.noIconTemplate);
+    this.newPage.remove(this.introduce);
+  }
+  iconAdd() {
+    this.iconBar.element.innerHTML = '😚';
+    this.iconBar.element.style.fontSize = '70px';
+    this.iconBar.element.style.width = '80px';
+    this.iconBar.element.style.height = '80px';
   }
 }
 export default Page;
