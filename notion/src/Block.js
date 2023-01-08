@@ -12,7 +12,7 @@ class Block {
 
     newBlock.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
-        newBlock.placeholder = '';
+        newBlock.element.placeholder = '';
         newBlock.onblur();
         new Block(main);
       }
