@@ -1,20 +1,23 @@
+import Dom from './Dom';
+
 class Block {
   constructor(main) {
-    const newBlock = document.createElement('input');
+    const newBlock = new Dom(
+      'input',
+      'block',
+      '명령어 사용 시 "/"를 입력하세요'
+    );
     setTimeout(() => newBlock.focus(), 100);
-    newBlock.placeholder = '명령어 사용 시 "/"를 입력하세요';
-    newBlock.classList.add('block');
-    main.appendChild(newBlock);
+    main.append(newBlock);
 
     newBlock.addEventListener('keydown', (event) => {
-      console.log(event.key);
       if (event.key === 'Enter') {
         newBlock.placeholder = '';
-        setTimeout(() => newBlock.onblur(), 0);
+        newBlock.onblur();
         new Block(main);
       }
       if (event.key === 'Backspace' && newBlock.value === '') {
-        main.removeChild(main.lastChild);
+        main.element.removeChild(main.lastChild);
         if (main.childElementCount != 1) {
           main.lastChild.placeholder = '명령어 사용 시 " / "를 입력하세요';
         }

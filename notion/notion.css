@@ -67,7 +67,7 @@ section {
 .newPageList:hover {
   background-color: #ededeb;
 }
-#main {
+.main {
   padding-left: 20vw;
 }
 .title {
@@ -112,4 +112,17 @@ section {
   padding: 100px;
   display: flex;
   flex-direction: column;
+}
+.iconBar {
+  width: 110px;
+  padding: 3px;
+  border-radius: 5px;
+  color: rgb(179, 179, 179);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconBar:hover {
+  background-color: #efefef;
 }
