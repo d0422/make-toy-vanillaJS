@@ -26,6 +26,24 @@ class Block {
       if (event.key === '/') {
         console.log('/눌러짐');
       }
+      if (event.key === 'ArrowUp') {
+        newBlock.placeholder = '';
+        setTimeout(() => {
+          newBlock.previousSibling.focus();
+          newBlock.previousSibling.placeholder =
+            '명령어 사용 시 ' / '를 입력하세요';
+        }, 0);
+      }
+      if (event.key === 'ArrowDown') {
+        if (newBlock.nextSibling) {
+          newBlock.placeholder = '';
+          setTimeout(() => {
+            newBlock.nextSibling.focus();
+            newBlock.nextSibling.placeholder =
+              '명령어 사용 시 " / "를 입력하세요';
+          }, 0);
+        }
+      }
     });
     newBlock.addEventListener('keyup', (event) => {
       if (event.key === ' ' && newBlock.value === '# ') {
