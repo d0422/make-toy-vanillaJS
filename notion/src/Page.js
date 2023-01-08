@@ -41,6 +41,11 @@ class Page {
         new Block(newPage);
       }
     });
+    noIconTemplate.addEventListener('click', () => {
+      newPage.removeChild(introduce);
+      newPage.removeChild(iconTemplate);
+      newPage.removeChild(noIconTemplate);
+    });
   }
 }
 export default Page;
