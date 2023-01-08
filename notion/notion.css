@@ -1,18 +1,27 @@
 body {
   margin: 0;
   padding: 0;
+  position: absolute;
 }
 
 nav {
   height: 100vh;
   margin: 0;
-  padding: 0;
   width: 20vw;
+  padding: 0;
   background-color: #f7f7f5;
   display: flex;
   flex-direction: column;
   font-size: 15px;
   position: fixed;
+  z-index: 999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+main {
+  left: 0;
 }
 header {
   display: flex;
@@ -125,4 +134,14 @@ section {
 }
 .iconBar:hover {
   background-color: #efefef;
+}
+.resizeBar {
+  height: 100vh;
+  width: 10px;
+  padding-left: 20vw;
+  position: absolute;
+  z-index: 1;
+}
+.resizeBar:hover {
+  cursor: col-resize;
 }

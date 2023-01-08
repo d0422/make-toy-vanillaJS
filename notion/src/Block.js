@@ -7,7 +7,7 @@ class Block {
       'block',
       '명령어 사용 시 "/"를 입력하세요'
     );
-    setTimeout(() => newBlock.focus(), 100);
+    newBlock.focus();
     main.append(newBlock);
 
     newBlock.addEventListener('keydown', (event) => {
