@@ -40,6 +40,15 @@ class Dom {
   get value() {
     return this.element.value;
   }
+  set value(inputValue) {
+    this.element.value = inputValue;
+  }
+  get placeholder() {
+    return this.element.placeholder;
+  }
+  set placeholder(inputValue) {
+    this.element.placeholder = inputValue;
+  }
   get childElementCount() {
     return this.element.childElementCount;
   }
