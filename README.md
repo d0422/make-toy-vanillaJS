@@ -13,3 +13,9 @@
 ![Alt text](img/notion.gif)
 
 바닐라 js와 웹팩을 사용한 노션 클론 코딩
+
+![Alt text](img/resize.gif)
+resize
+
+![Alt text](img/h1,h2,h3.gif)
+제목 블록
