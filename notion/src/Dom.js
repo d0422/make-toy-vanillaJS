@@ -28,6 +28,9 @@ class Dom {
   hasChildNodes() {
     return this.element.hasChildNodes();
   }
+  addClass(className) {
+    this.element.classList.add(className);
+  }
   get firstChild() {
     return this.element.firstChild;
   }

@@ -149,3 +149,18 @@ section {
 .newText {
   padding-left: 3px;
 }
+.h1 {
+  font-size: 27px;
+  font-weight: 600;
+  padding-top: 10px;
+}
+.h2 {
+  font-size: 22px;
+  font-weight: 700;
+  padding-top: 10px;
+}
+.h3 {
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 10px;
+}

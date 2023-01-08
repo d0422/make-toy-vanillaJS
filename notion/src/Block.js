@@ -17,11 +17,31 @@ class Block {
         new Block(main);
       }
       if (event.key === 'Backspace' && newBlock.value === '') {
-        main.element.removeChild(main.lastChild);
+        main.remove(newBlock);
         if (main.childElementCount != 2) {
           main.lastChild.placeholder = '명령어 사용 시 " / "를 입력하세요';
         }
         setTimeout(() => main.lastChild.focus(), 0);
+      }
+      if (event.key === '/') {
+        console.log('/눌러짐');
+      }
+    });
+    newBlock.addEventListener('keyup', (event) => {
+      if (event.key === ' ' && newBlock.value === '# ') {
+        newBlock.addClass('h1');
+        newBlock.element.value = '';
+        newBlock.element.placeholder = '제목1';
+      }
+      if (event.key === ' ' && newBlock.value === '## ') {
+        newBlock.addClass('h2');
+        newBlock.element.value = '';
+        newBlock.element.placeholder = '제목2';
+      }
+      if (event.key === ' ' && newBlock.value === '### ') {
+        newBlock.addClass('h3');
+        newBlock.element.value = '';
+        newBlock.element.placeholder = '제목3';
       }
     });
   }
