@@ -31,7 +31,7 @@ class Block {
         setTimeout(() => {
           newBlock.previousSibling.focus();
           newBlock.previousSibling.placeholder =
-            '명령어 사용 시 ' / '를 입력하세요';
+            '명령어 사용 시 " / "를 입력하세요';
         }, 0);
       }
       if (event.key === 'ArrowDown') {
