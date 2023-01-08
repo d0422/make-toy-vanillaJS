@@ -12,7 +12,7 @@ class Block {
 
     newBlock.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
-        newBlock.element.placeholder = '';
+        newBlock.placeholder = '';
         newBlock.onblur();
         new Block(main);
       }
@@ -30,18 +30,18 @@ class Block {
     newBlock.addEventListener('keyup', (event) => {
       if (event.key === ' ' && newBlock.value === '# ') {
         newBlock.addClass('h1');
-        newBlock.element.value = '';
-        newBlock.element.placeholder = '제목1';
+        newBlock.value = '';
+        newBlock.placeholder = '제목1';
       }
       if (event.key === ' ' && newBlock.value === '## ') {
         newBlock.addClass('h2');
-        newBlock.element.value = '';
-        newBlock.element.placeholder = '제목2';
+        newBlock.value = '';
+        newBlock.placeholder = '제목2';
       }
       if (event.key === ' ' && newBlock.value === '### ') {
         newBlock.addClass('h3');
-        newBlock.element.value = '';
-        newBlock.element.placeholder = '제목3';
+        newBlock.value = '';
+        newBlock.placeholder = '제목3';
       }
     });
   }

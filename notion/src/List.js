@@ -11,7 +11,7 @@ class List {
     newPageList.append(newIcon);
     newPageList.append(newText);
 
-    newIcon.element.classList.add('newText');
+    newIcon.addClass('newText');
 
     const nav = document.querySelector('nav');
     nav.appendChild(newPageList.element);

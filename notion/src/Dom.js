@@ -10,6 +10,37 @@ class Dom {
     }
     if (className !== undefined) this.element.classList.add(className);
   }
+  get firstChild() {
+    return this.element.firstChild;
+  }
+  get lastChild() {
+    return this.element.lastChild;
+  }
+
+  get value() {
+    return this.element.value;
+  }
+  set value(inputValue) {
+    this.element.value = inputValue;
+  }
+
+  get placeholder() {
+    return this.element.placeholder;
+  }
+  set placeholder(inputValue) {
+    this.element.placeholder = inputValue;
+  }
+
+  get innerHTML() {
+    return this.element.innerHTML;
+  }
+  set innerHTML(inputValue) {
+    this.element.innerHTML = inputValue;
+  }
+  get childElementCount() {
+    return this.element.childElementCount;
+  }
+
   append(domInstance) {
     this.element.appendChild(domInstance.element);
   }
@@ -30,27 +61,6 @@ class Dom {
   }
   addClass(className) {
     this.element.classList.add(className);
-  }
-  get firstChild() {
-    return this.element.firstChild;
-  }
-  get lastChild() {
-    return this.element.lastChild;
-  }
-  get value() {
-    return this.element.value;
-  }
-  set value(inputValue) {
-    this.element.value = inputValue;
-  }
-  get placeholder() {
-    return this.element.placeholder;
-  }
-  set placeholder(inputValue) {
-    this.element.placeholder = inputValue;
-  }
-  get childElementCount() {
-    return this.element.childElementCount;
   }
 }
 

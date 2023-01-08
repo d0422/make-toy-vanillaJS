@@ -12,9 +12,6 @@ class Page {
     this.newPage.append(this.newTitle);
     this.pageInit();
 
-    if (this.mainUI.hasChildNodes()) {
-      this.mainUI.removeChild(this.mainUI.firstChild);
-    }
     this.mainUI.append(this.newPage);
 
     this.newTitle.addEventListener('keydown', (event) => {
@@ -43,6 +40,7 @@ class Page {
     this.newPage.append(this.introduce);
     this.newPage.append(this.iconTemplate);
     this.newPage.append(this.noIconTemplate);
+
     this.noIconTemplate.addEventListener('click', () => {
       this.destroyTemplate();
       new Block(this.newPage);
@@ -60,7 +58,7 @@ class Page {
     this.newPage.remove(this.introduce);
   }
   iconAdd() {
-    this.iconBar.element.innerHTML = '😚';
+    this.iconBar.innerHTML = '😚';
     this.iconBar.element.style.fontSize = '70px';
     this.iconBar.element.style.width = '80px';
     this.iconBar.element.style.height = '80px';
