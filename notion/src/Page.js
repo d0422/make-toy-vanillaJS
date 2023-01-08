@@ -3,16 +3,7 @@ import Dom from './Dom';
 
 class Page {
   constructor() {
-    this.iconBar = new Dom('div', 'iconBar', '☺ 아이콘 추가');
-    this.mainUI = new Dom('div', 'main');
-    document.body.appendChild(this.mainUI.element);
-    this.newPage = new Dom('div', 'newPage');
-    this.newTitle = new Dom('input', 'title', '제목없음');
-    this.newPage.append(this.iconBar);
-    this.newPage.append(this.newTitle);
     this.pageInit();
-
-    this.mainUI.append(this.newPage);
 
     this.newTitle.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
@@ -26,6 +17,13 @@ class Page {
     });
   }
   pageInit() {
+    this.iconBar = new Dom('div', 'iconBar', '☺ 아이콘 추가');
+    this.mainUI = new Dom('div', 'main');
+    document.body.appendChild(this.mainUI.element);
+    this.newPage = new Dom('div', 'newPage');
+    this.newTitle = new Dom('input', 'title', '제목없음');
+    this.newPage.append(this.iconBar);
+    this.newPage.append(this.newTitle);
     this.introduce = new Dom(
       'div',
       'introduce',
@@ -51,6 +49,7 @@ class Page {
       new Block(this.newPage);
     });
     this.iconBar.addEventListener('click', () => this.iconAdd());
+    this.mainUI.append(this.newPage);
   }
   destroyTemplate() {
     this.newPage.remove(this.iconTemplate);
