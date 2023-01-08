@@ -100,6 +100,7 @@ section {
   border-style: none;
   background-color: none;
   font-size: 15px;
+  padding: 5px;
 }
 .block::placeholder {
   color: #dadad8;

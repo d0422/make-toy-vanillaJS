@@ -32,10 +32,12 @@ class Page {
 
     newTitle.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
-        newPage.removeChild(introduce);
-        newPage.removeChild(iconTemplate);
-        newPage.removeChild(noIconTemplate);
-        setTimeout(() => newTitle.onblur(), 100);
+        if (newPage.childElementCount != 1) {
+          newPage.removeChild(introduce);
+          newPage.removeChild(iconTemplate);
+          newPage.removeChild(noIconTemplate);
+        }
+        setTimeout(() => newTitle.onblur(), 0);
         new Block(newPage);
       }
     });
