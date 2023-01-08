@@ -146,3 +146,6 @@ section {
 .resizeBar:hover {
   cursor: col-resize;
 }
+.newText {
+  padding-left: 3px;
+}

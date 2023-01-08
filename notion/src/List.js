@@ -1,27 +1,21 @@
+import Dom from './Dom';
+
 class List {
   constructor() {
-    const newPageList = document.createElement('div');
-    const newIcon = document.createElement('div');
-    const newToggle = document.createElement('div');
-    const newText = document.createElement('div');
+    const newPageList = new Dom('div', 'newPageList');
+    const newIcon = new Dom('div', 'clickableDark', '📄');
+    const newToggle = new Dom('div', 'clickableDark', '>');
+    const newText = new Dom('div', 'newText', '제목없음');
 
-    newToggle.innerHTML = '>';
-    newIcon.innerHTML = '📄';
-    newText.innerHTML = '제목없음';
+    newPageList.append(newToggle);
+    newPageList.append(newIcon);
+    newPageList.append(newText);
 
-    newPageList.appendChild(newToggle);
-    newPageList.appendChild(newIcon);
-    newPageList.appendChild(newText);
+    newIcon.element.classList.add('newText');
 
-    newIcon.style.paddingLeft = '3px';
-    newText.style.paddingLeft = '3px';
-    newToggle.classList.add('clickableDark');
-    newIcon.classList.add('clickableDark');
-
-    newPageList.classList.add('newPageList');
     const nav = document.querySelector('nav');
-    nav.appendChild(newPageList);
-    this.HTML = newPageList;
+    nav.appendChild(newPageList.element);
+    this.element = newPageList.element;
   }
 }
 export default List;
