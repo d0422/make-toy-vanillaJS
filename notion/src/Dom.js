@@ -40,7 +40,12 @@ class Dom {
   get childElementCount() {
     return this.element.childElementCount;
   }
-
+  get previousSibling() {
+    return this.element.previousSibling;
+  }
+  get nextSibling() {
+    return this.element.nextSibling;
+  }
   append(domInstance) {
     this.element.appendChild(domInstance.element);
   }
