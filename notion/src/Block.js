@@ -18,7 +18,7 @@ class Block {
       }
       if (event.key === 'Backspace' && newBlock.value === '') {
         main.element.removeChild(main.lastChild);
-        if (main.childElementCount != 1) {
+        if (main.childElementCount != 2) {
           main.lastChild.placeholder = '명령어 사용 시 " / "를 입력하세요';
         }
         setTimeout(() => main.lastChild.focus(), 0);
