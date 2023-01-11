@@ -39,9 +39,27 @@ const plusButton = document.querySelector('.pluspage');
 const list = [];
 const pages = [];
 plusButton.addEventListener('click', () => {
+  while (document.body.childElementCount > 2) {
+    document.body.removeChild(document.body.lastChild);
+  }
+
   const newPage = new Page();
   const newList = new List();
+  list.forEach((l) => {
+    l.element.style.backgroundColor = '#f7f7f5';
+  });
+  newList.element.style.backgroundColor = '#ededeb';
   pages.push(newPage);
   list.push(newList);
-  newList.element.style.backgroundColor = '#ededeb';
+  newList.element.addEventListener('click', () => {
+    while (document.body.childElementCount > 2) {
+      document.body.removeChild(document.body.lastChild);
+    }
+    list.forEach((l) => {
+      l.element.style.backgroundColor = '#f7f7f5';
+    });
+    newList.element.style.backgroundColor = '#ededeb';
+    console.log(newPage.pageContext);
+    newPage.load();
+  });
 });

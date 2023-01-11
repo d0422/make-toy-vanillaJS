@@ -3,8 +3,8 @@ import Dom from './Dom';
 
 class Page {
   constructor() {
-    this.pageInit();
-
+    if (!this.mainUI) this.pageInit();
+    this.load();
     this.newTitle.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
         console.log(this.newPage.childElementCount);
@@ -16,10 +16,13 @@ class Page {
       }
     });
   }
+  load() {
+    document.body.appendChild(this.mainUI.element);
+  }
   pageInit() {
     this.iconBar = new Dom('div', 'iconBar', '☺ 아이콘 추가');
     this.mainUI = new Dom('div', 'main');
-    document.body.appendChild(this.mainUI.element);
+
     this.newPage = new Dom('div', 'newPage');
     this.newTitle = new Dom('input', 'title', '제목없음');
     this.newPage.append(this.iconBar);
