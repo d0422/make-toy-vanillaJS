@@ -1,4 +1,4 @@
-import { EMPTY_MESSAGE } from './const';
+import { BLOCK_TYPE, EMPTY_MESSAGE } from './const';
 import Dom from './Dom';
 class Block {
   constructor(main) {
@@ -37,6 +37,7 @@ class Block {
     };
 
     newBlock.addEventListener('keydown', (event) => {
+      if (!Object.keys(keyDownEvent).includes(event.key)) return;
       keyDownEvent[event.key]();
       if (event.key === '/') {
         console.log('/눌러짐');
