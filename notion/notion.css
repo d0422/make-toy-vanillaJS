@@ -107,6 +107,7 @@ section {
   padding-bottom: 20px;
 }
 .block {
+  width: max-content;
   border-style: none;
   background-color: none;
   font-size: 15px;
