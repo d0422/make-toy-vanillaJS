@@ -1,13 +1,5 @@
 # 바닐라 자바스크립트로 장난감 만들기
 
-## dragger
-
-![Alt text](img/dragger.gif)
-
-마우스로 drag and drop을 구현
-
-## counter
-
 ## notion
 
 ![Alt text](img/notion.gif)
@@ -17,5 +9,13 @@
 ![Alt text](img/resize.gif)
 resize
 
-![Alt text](img/h1,h2,h3.gif)
-제목 블록
+![Alt text](img/Observer.gif)
+제목 연동 및 h1, h2, h3기능
+
+## dragger
+
+![Alt text](img/dragger.gif)
+
+마우스로 drag and drop을 구현
+
+## counter
