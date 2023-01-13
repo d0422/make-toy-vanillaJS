@@ -39,9 +39,6 @@ class Block {
     newBlock.addEventListener('keydown', (event) => {
       if (!Object.keys(keyDownEvent).includes(event.key)) return;
       keyDownEvent[event.key]();
-      if (event.key === '/') {
-        console.log('/눌러짐');
-      }
     });
 
     newBlock.addEventListener('keyup', (event) => {

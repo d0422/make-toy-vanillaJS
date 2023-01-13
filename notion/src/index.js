@@ -1,6 +1,7 @@
 import Dom from './Dom';
 import List from './List';
 import Page from './Page';
+import TitleModel from './TitleModel';
 function resize() {
   const nav = document.querySelector('nav');
   let pressed = false;
@@ -42,9 +43,9 @@ plusButton.addEventListener('click', () => {
   while (document.body.childElementCount > 2) {
     document.body.removeChild(document.body.lastChild);
   }
-
-  const newPage = new Page();
-  const newList = new List();
+  const title = new TitleModel();
+  const newPage = new Page(title);
+  const newList = new List(title);
   list.forEach((l) => {
     l.element.style.backgroundColor = '#f7f7f5';
   });
