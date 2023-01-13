@@ -2,15 +2,12 @@
 
 ## notion
 
-![Alt text](img/notion.gif)
+![Alt text](img/pagenation.gif)
 
 바닐라 js와 웹팩을 사용한 노션 클론 코딩
 
 ![Alt text](img/resize.gif)
 resize
-
-![Alt text](img/Observer.gif)
-제목 연동 및 h1, h2, h3기능
 
 ## dragger
 
